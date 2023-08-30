@@ -1,0 +1,536 @@
+.chart {
+  margin: 70px 0 0;
+}
+
+@media screen and (min-width: 768px) {
+  .chart {
+    margin: 70px 0 50px 0;
+    padding: 0 30px 30px;
+    background-color: #eeeeee;
+  }
+}
+
+/*
+.chart__container {
+  position: relative;
+  padding: 5px;
+  margin-top: 30px;
+  background-color: #fff;
+  box-sizing: border-box;
+  -webkit-box-shadow: none;
+  -ms-box-shadow: none;
+  -moz-box-shadow: none;
+  -o-box-shadow: none;
+  box-shadow: none;
+}
+@media screen and (min-width: 768px) {
+  .chart__container {
+    -webkit-box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.1);
+    -ms-box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.1);
+    -o-box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.1);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .chart__container {
+    padding: 30px;
+  }
+}
+*/
+
+.chart__axis-y {
+  padding: 40px 0 15px;
+  color: rgba(0, 0, 0, 0.6);
+  position: relative;
+  z-index: 1;
+  text-align: left;
+  top: -16px;
+  left: 15px;
+  font-weight: 600;
+  font-size: 12px;
+}
+
+@media screen and (min-width: 768px) {
+  .chart__axis-y {
+    width: 120px;
+    padding: 15px 0;
+    text-align: right;
+    font-size: 14px;
+    font-weight: 700;
+    top: 0;
+    left: 0;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .chart__axis-y {
+    width: 170px;
+  }
+}
+
+.chart__axis-x {
+  width: 100%;
+  padding-top: 10px;
+  padding-right: 15px;
+  padding-bottom: 15px;
+  padding-left: 15px;
+  color: rgba(0, 0, 0, 0.6);
+  box-sizing: border-box;
+  font-size: 11px;
+}
+
+@media screen and (min-width: 768px) {
+  .chart__axis-x {
+    padding-top: 15px;
+    padding-left: 145px;
+    font-size: 14px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .chart__axis-x {
+    padding-left: 195px;
+    font-size: 16px;
+  }
+}
+
+.chart__label-y {
+  display: block;
+  height: 55px;
+  position: relative;
+  padding: 5px 35px 5px 0;
+  box-sizing: border-box;
+  line-height: 1.1;
+}
+
+.chart__label-y:before {
+  content: '';
+  display: none;
+  position: absolute;
+  top: 15px;
+  right: 0;
+  height: 1px;
+  background-color: #000;
+  width: 10px;
+}
+
+.chart__label-y:before {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {}
+
+.chart__label-x {
+  display: inline-block;
+  width: 10%;
+  position: relative;
+  right: -10px;
+  padding-top: 10px;
+  text-align: right;
+}
+
+@media screen and (max-width: 1279px) {
+  .chart__label-x:nth-child(odd) {
+    opacity: 0;
+  }
+}
+
+.chart__label-x:before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  right: 10px;
+  width: 1px;
+  background-color: #000;
+  height: 10px;
+}
+
+@media screen and (min-width: 768px) {
+  .chart__label-x:before {
+    top: -15px;
+    right: 20px;
+  }
+}
+
+.chart__box {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0 15px;
+  border-left: 1px solid #000;
+  border-bottom: 1px solid #000;
+  box-sizing: border-box;
+}
+
+@media screen and (min-width: 768px) {
+  .chart__box {
+    padding: 0 25px 0 15px;
+    width: calc(100% - 170px + 50px);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .chart__box {
+    width: calc(100% - 170px);
+  }
+}
+
+.chart--top {
+  position: relative;
+}
+
+/*------------------------------------*\
+    # CHART - Horizontal bars
+\*------------------------------------*/
+
+.chart--horizontal {
+  color: rgba(0, 0, 0, 0.6);
+  padding-top: 25px;
+}
+
+@media screen and (min-width: 768px) {
+  .chart--horizontal {
+    padding-top: 0;
+  }
+}
+
+.chart--horizontal .chart__bars {
+  padding: 15px 0 1px;
+  background-image: linear-gradient(to top, #fff 13px, transparent 1px), linear-gradient(to left, #eeeeee 1px, transparent 1px);
+  background-size: 20% 20px;
+  background-position: left;
+}
+
+@media screen and (min-width: 1024px) {
+  .chart--horizontal .chart__bars {
+    background-size: 10% 20px;
+    background-image: linear-gradient(to top, #fff 13px, transparent 1px), linear-gradient(to left, #e1e1e1 1px, transparent 1px);
+  }
+}
+
+.chart--horizontal .bar__container {
+  width: 100%;
+  height: 20px;
+  position: relative;
+  margin: 17.5px 0 35px;
+  padding-right: 10px;
+  box-sizing: border-box;
+  background-clip: content-box;
+}
+
+.chart--horizontal .bar__container:first-of-type {
+  margin-top: 5px;
+}
+
+.chart--horizontal .bar__container:after {
+  content: attr(data-value) "%";
+  position: absolute;
+  left: 100%;
+  opacity: 0;
+  padding-left: 13px;
+  font-size: 14px;
+  -webkit-transition: opacity 0s ease-in-out 1.2s;
+  -ms-transition: opacity 0s ease-in-out 1.2s;
+  -moz-transition: opacity 0s ease-in-out 1.2s;
+  -o-transition: opacity 0s ease-in-out 1.2s;
+  transition: opacity 0s ease-in-out 1.2s;
+  color: #000000;
+}
+
+@media screen and (min-width: 768px) {
+  .chart--horizontal .bar__container:after {
+    font-size: 14px;
+  }
+}
+
+.chart__container.visible .chart--horizontal .bar__container:after {
+  opacity: 1;
+  -webkit-transition: opacity 0.5s ease-in-out 1.2s;
+  -ms-transition: opacity 0.5s ease-in-out 1.2s;
+  -moz-transition: opacity 0.5s ease-in-out 1.2s;
+  -o-transition: opacity 0.5s ease-in-out 1.2s;
+  transition: opacity 0.5s ease-in-out 1.2s;
+}
+
+.chart--horizontal .bar {
+  height: 20px;
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 100%;
+  bottom: 0;
+  left: 0;
+  background-color: #f75757;
+  -webkit-transition: all 0s ease-in-out;
+  -ms-transition: all 0s ease-in-out;
+  -moz-transition: all 0s ease-in-out;
+  -o-transition: all 0s ease-in-out;
+  transition: all 0s ease-in-out;
+}
+
+.chart__container.visible .chart--horizontal .bar {
+  -webkit-transition: all 1.2s ease-in-out;
+  -ms-transition: all 1.2s ease-in-out;
+  -moz-transition: all 1.2s ease-in-out;
+  -o-transition: all 1.2s ease-in-out;
+  transition: all 1.2s ease-in-out;
+  right: 0;
+}
+
+.chart--horizontal .bar.bar--danger {
+  background-color: #a0c85a;
+}
+
+/*------------------------------------*\
+    # Pie chart
+\*------------------------------------*/
+
+.chart--donut,
+.chart--pie {
+  max-width: 300px;
+  margin: 30px auto 10px;
+}
+
+@media screen and (min-width: 768px) {
+  .chart--donut,
+  .chart--pie {
+    max-width: 400px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .chart--donut,
+  .chart--pie {
+    margin: 30px auto;
+  }
+}
+
+/*------------------------------------*\
+    # Others
+\*------------------------------------*/
+
+.chart__header {
+  margin-bottom: 10px;
+}
+
+@media screen and (min-width: 768px) {
+  .chart__header {
+    margin-bottom: 70px;
+  }
+  .chart--left .chart__header,
+  .chart--right .chart__header {
+    margin-bottom: 40px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .chart__filters--big {
+    position: absolute;
+    right: 5px;
+    top: 0;
+    padding: 35px 15px;
+  }
+}
+
+.chart__legend {
+  margin: 30px 10px 0;
+  padding: 0;
+  list-style: none;
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 14px;
+}
+
+@media screen and (min-width: 768px) {
+  .chart__legend {
+    margin: 30px 10px 0 20px;
+  }
+}
+
+.chart__legend li {
+  position: relative;
+  padding: 0 10px 10px 15px;
+}
+
+.chart__legend span {
+  display: inline-block;
+  height: 15px;
+  width: 15px;
+  position: absolute;
+  left: -10px;
+  top: -3px;
+  vertical-align: middle;
+  margin: 5px 10px 8px 0;
+}
+
+@media screen and (min-width: 1024px) {
+  .chart--left {
+    margin-right: 15px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .chart--right {
+    margin-left: 15px;
+  }
+}
+
+.chart__btn.btn--read-more {
+  top: 15px;
+  display: block;
+  z-index: 4;
+}
+
+@media screen and (min-width: 768px) {
+  .chart__btn.btn--read-more {
+    top: 25px;
+  }
+}
+
+.chart__btn.btn--read-more .hide {
+  display: none;
+}
+
+.chart {
+  position: relative;
+  max-height: 150px;
+  margin-bottom: -70px;
+  overflow: hidden;
+  -webkit-transition: all 0s ease-in-out;
+  -ms-transition: all 0s ease-in-out;
+  -moz-transition: all 0s ease-in-out;
+  -o-transition: all 0s ease-in-out;
+  transition: all 0s ease-in-out;
+}
+
+/*
+.chart .chart__container {
+  -webkit-transition: all 1s ease-in-out;
+  -ms-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+  opacity: 0;
+}
+*/
+
+.chart:before {
+  content: '';
+  background-image: linear-gradient(to bottom, rgba(238, 238, 238, 0.5) 0%, #fff 100px);
+  background-repeat: repeat-x;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 3;
+}
+
+.chart.active {
+  max-height: 2000px;
+  overflow: visible;
+  padding-bottom: 60px;
+  margin-bottom: 0;
+  color: #000;
+  -webkit-transition: all 1s ease-in-out;
+  -ms-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+}
+
+@media screen and (min-width: 768px) {
+  .chart.active {
+    padding-bottom: 100px;
+  }
+}
+
+/*
+.chart.active .chart__container {
+  opacity: 1;
+}
+*/
+
+.chart.active:before {
+  display: none;
+}
+
+.chart.active .chart__btn {
+  position: absolute;
+  bottom: 15px;
+  left: 0;
+  right: 0;
+  top: auto;
+}
+
+/*# sourceMappingURL=style.css.map */
+
+@media(max-width:1080px) {
+  .chart__label-y {
+    height: 45px;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 5px 20px 5px 0;
+  }
+  .chart__axis-y {
+    width: 120px;
+  }
+  .chart__box {
+    width: calc(100% - 120px);
+  }
+  .chart--horizontal .bar {
+    height: 14px;
+  }
+  .chart--horizontal .bar__container {
+    margin: 31.6px 0 24.5px;
+    height: 14px;
+  }
+  .chart__axis-x {
+    padding-left: 145px;
+  }
+}
+
+@media(max-width:767px) {
+  .chart__axis-y {
+    width: 105px;
+  }
+  .chart--horizontal {
+    padding-top: 10px;
+  }
+}
+
+@media(max-width:568px) {
+  .chart__axis-y {
+    left: 0px;
+  }
+  .chart__label-y {
+    font-size: 12px;
+    padding: 5px 12px 5px 0;
+  }
+  .chart__axis-y {
+    width: 95px;
+  }
+  .chart__box {
+    width: calc(100% - 95px);
+  }
+  .chart__axis-x {
+    padding-left: 95px;
+  }
+}
+
+@media(max-width:480px) {
+  .chart__box {
+    width: calc(100% - 0px);
+  }
+  .chart__axis-y {
+    left: 16px;
+    top: -34px;
+  }
+  .chart__axis-x {
+    padding-left: 0px;
+  }
+}

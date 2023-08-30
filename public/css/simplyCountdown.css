@@ -1,0 +1,96 @@
+.simply-countdown-custom {
+  overflow: hidden;
+  display: table;
+  margin: 0 auto;
+	font-family: 'Open Sans', sans-serif;
+}
+
+.simply-countdown-custom>.simply-section {
+  width: 100px;
+  height: 100px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  float: left;
+  margin: 15px;
+  background: none;
+  color: #fff;
+  font-size: 1em;
+}
+
+.simply-countdown-custom>.simply-section .simply-amount,
+.simply-countdown-custom>.simply-section .simply-word {
+  display: block;
+  text-align: center;
+}
+
+.simply-countdown-custom>.simply-section .simply-amount {
+  font-weight: 600;
+  font-size: 4em;
+  letter-spacing: 3px;
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, .5);
+}
+
+.simply-countdown-custom>.simply-section .simply-word {
+  font-weight: 500;
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, .5);
+  text-transform: uppercase;
+  font-size: 0.8em;
+  letter-spacing: 1px;
+}
+
+/*----*/
+
+@media(max-width:991px) {
+  .simply-countdown-custom>.simply-section .simply-amount {
+    font-size: 2.5em;
+  }
+  .simply-countdown-custom>.simply-section {
+    width: 80px;
+    height: 80px;
+    margin: 10px;
+  }
+}
+
+
+@media(max-width:414px) {
+  .simply-countdown-custom>.simply-section {
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+  }
+}
+
+/*----*/
+@media(max-width:1080px){
+.simply-countdown-custom>.simply-section .simply-amount {
+  font-size: 3.5em;
+}
+}
+
+@media(max-width:480px) {
+  .simply-countdown-custom>.simply-section .simply-amount {
+    font-size: 2.5em;
+    font-weight: 400;
+  }
+  .simply-countdown-custom>.simply-section {
+    width: 70px;
+    height: 70px;
+    margin: 5px;
+  }
+  .simply-countdown-custom>.simply-section .simply-word {
+    font-size: 0.7em;
+  }
+}
