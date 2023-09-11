@@ -1,11 +1,4 @@
-
-
-During my internship at NIC (National Informatics Centre), I had the
-opportunity to work on a live project to build a web application.
-This internship provided me with a deep understanding of the
-intricate workings of an esteemed organization like NIC and
-allowed me to apply my theoretical knowledge to real-world
-scenarios.
+Web-based system developed by Jalpaiguri District Administration and NIC, India, enables registered users to input and update central and state government scheme data. It offers secure login, data encryption, and generates monthly/yearly project reports in PDF and Excel based on specified criteria.
 
 ![data](https://github.com/kingSSG/nic-project/assets/66203670/9b0ac9b2-d405-4be0-a355-ad76e9aeaa90)
 ![er](https://github.com/kingSSG/nic-project/assets/66203670/82b0dfe6-6ead-4468-a4ef-ecd0d29ba7e4)
