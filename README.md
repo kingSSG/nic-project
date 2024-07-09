@@ -1,3 +1,5 @@
+The CHIEF MINISTER REPORT GENERATION SYSTEM, developed by Jalpaiguri District Administration and the National Informatics Centre, is a web-based tool for updating data on central and state government schemes. It ensures accurate reporting based on user-provided data from various fields, facilitating effective monitoring and evaluation.
+
 Web-based system developed by Jalpaiguri District Administration and NIC, India, enables registered users to input and update central and state government scheme data. It offers secure login, data encryption, and generates monthly/yearly project reports in PDF and Excel based on specified criteria.
 full project -- pdf ( https://drive.google.com/file/d/1_Q7XGO5arcM86wA-FzWXWm6HnRdWZ--t/view?usp=drive_link )
 
